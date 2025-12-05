@@ -1957,7 +1957,6 @@ void WebDriverService::elementSendKeys(RefPtr<JSON::Object>&& parameters, Functi
 
     auto text = parameters->getString("text"_s);
     if (text.isEmpty()) {
-        completionHandler(CommandResult::fail(CommandResult::ErrorCode::InvalidArgument, "Missing text parameter"_s));
         return;
     }
 
